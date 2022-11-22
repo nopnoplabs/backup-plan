@@ -1,6 +1,6 @@
-# My Backup Plan
+# Backup Plan
 
-This repository contains the scripts and explanation behind my personal backup strategy.
+This repository is adapted from Jeff Geerling's my-backup-plan repo. Jeff's data inventory and use case is very similar to mine, so I've built upon his work for my own needs.
 
 Every backup plan is unique, based on your risk assessment, the importance of the data being backed up, and budget (both in time and money).
 
