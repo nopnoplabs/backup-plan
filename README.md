@@ -20,12 +20,6 @@ I follow a variant of the 3-2-1 backup strategy, and have _at least_:
 
 And for some of my data (like the contents of my Dropbox or iCloud Photos Library) I have 4 or 5 copies of the data!
 
-## Video
-
-I made a video about my backup plan in late 2021, you can watch it for a good overview:
-
-[Backups: You're doing 'em wrong!](https://www.youtube.com/watch?v=S0KZ5iXTkzg) (YouTube, Dec 2021)
-
 ## Backup Strategy
 
 I have a lot of data I care about, but to make sure I covered _everything_, I took a data inventory and grouped everything into six main categories:
