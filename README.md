@@ -15,12 +15,27 @@ I follow a variant of the 3-2-1 backup strategy, and have _at least_:
 ```
 3 Copies of all my data
 2 Copies on different storage media
-1 Offsite copy
+1 Offsite copy and immutable copy
 ```
 
-And for some of my data (like the contents of my Dropbox or iCloud Photos Library) I have 4 or 5 copies of the data!
-
 ## Backup Strategy
+
+With several devices and a mixture of cloud and on-premise services, I'd like a backup strategy that can accomodate a few different scenarios:
+
+Loss of device (and local data) through loss, theft or damage
+  example: ipad or laptop fails or goes misisng and must be replaced with minimal data loss
+  example: ransomware encrypts local device
+
+Loss of service access or availablility
+  example: icloud or Google account is compromised and locked out. 
+  example: service is unavailble through outage or limited connectivity
+  
+Loss of site
+  example: Natural disaster, fire, theft, extended power outage, etc.
+  
+The goal with any of these events is to minimize impact during an event. From my experience, I've presented risks in order from most likely to least likely. My goal is that the final version of this plan includes a playbook outlining recovery steps. 
+
+### Data Inventory
 
 I have a lot of data I care about, but to make sure I covered _everything_, I took a data inventory and grouped everything into six main categories:
 
