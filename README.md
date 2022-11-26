@@ -6,11 +6,11 @@ Having a solid and multi-tiered backup plan gives you peace of mind and the free
 
 ![3-2-1 backup plan](images/3-2-1-backup.jpeg)
 
-```
-3 Copies of all my data
-2 Copies on different storage media
-1 Offsite copy and immutable copy
-```
+
+- 3 Copies of all my data
+- 2 Copies on different storage media
+- 1 Offsite copy and immutable copy
+
 
 Another way to express this could be: 
 
@@ -45,12 +45,12 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 
 #### Catagories of Data
 
-Local Files
-Photos Library
-Video Content
-Code
-Infrastructure Backups
-Music Library
+- Local Files
+- Photos Library
+- Video Content
+- Code
+- Infrastructure Backups
+- Music Library
 
 
 #### Device Inventory - each device I need a recovery plan for
