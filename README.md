@@ -14,7 +14,9 @@ Having a solid and multi-tiered backup plan gives you peace of mind and the free
 
 Another way to express this could be: 
 
-Copy 1 is your local copy that you work on and interact with. Copy 2 is your backup copy to easily restore. Copy 3 is your offsite/immutable copy that can accessed in the event that copies 1 and 2 are not a viable option.
+- Copy 1 is your local copy that you work on and interact with. 
+- Copy 2 is your backup copy to easily restore. 
+- Copy 3 is your offsite/immutable copy that can accessed in the event that copies 1 and 2 are not a viable option.
 
 ## Backup Strategy
 
@@ -55,17 +57,17 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 
 #### Device Inventory - each device I need a recovery plan for
 
-Work Laptop
-Personal Laptop
-iPad
-phone
-Home File Server
-Home NAS
+- Work Laptop
+- Personal Laptop
+- iPad
+- phone
+- Home File Server
+- Home NAS
 
 #### Service Inventory
 
-GSuite - Email, Google Drive, Contacts
-Evernote
+- GSuite - Email, Google Drive, Contacts
+- Evernote
 
 ### iCloud Photo Library
 
