@@ -2,13 +2,7 @@
 
 This repository is adapted from Jeff Geerling's my-backup-plan repo. Jeff's data inventory and use case is very similar to mine, so I've built upon his work for my own needs.
 
-Every backup plan is unique, based on your risk assessment, the importance of the data being backed up, and budget (both in time and money).
-
-This is mine, and I figured I'd go ahead and document everything publicly, because so many people ask about it.
-
-Having a solid and multi-tiered backup plan gives you peace of mind and the freedom to not feel tied to any particular computer or 'sacred and precious backup drive' that has all your data stored on it.
-
-I follow a variant of the 3-2-1 backup strategy, and have _at least_:
+Having a solid and multi-tiered backup plan gives you peace of mind and the freedom to not feel tied to any particular devices or 'sacred and precious backup drive' that has all your data stored on it. An outline of recovery procedures provides guidance for testing backups and can serve as a playbook during an event. These events may be unplanned such as a device failure, or planned - such as my increasing disdain with subscription services like Dropbox.
 
 ![3-2-1 backup plan](images/3-2-1-backup.jpeg)
 
@@ -17,6 +11,10 @@ I follow a variant of the 3-2-1 backup strategy, and have _at least_:
 2 Copies on different storage media
 1 Offsite copy and immutable copy
 ```
+
+Another way to express this could be: 
+
+Copy 1 is your local copy that you work on and interact with. Copy 2 is your backup copy to easily restore. Copy 3 is your offsite/immutable copy that can accessed in the event that copies 1 and 2 are not a viable option.
 
 ## Backup Strategy
 
@@ -30,58 +28,57 @@ Loss of service access or availablility
   example: icloud or Google account is compromised and locked out. 
   example: service is unavailble through outage or limited connectivity
   
-Loss of site
+Loss of infrastructure or site
+  example: Infrastructure failure scenario: internet access, wifi, firewall, NAS, local server services
   example: Natural disaster, fire, theft, extended power outage, etc.
   
 The goal with any of these events is to minimize impact during an event. From my experience, I've presented risks in order from most likely to least likely. My goal is that the final version of this plan includes a playbook outlining recovery steps. 
 
 ### Data Inventory
 
-I have a lot of data I care about, but to make sure I covered _everything_, I took a data inventory and grouped everything into six main categories:
+Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobile devices, usb drives to create digital content. I've come to recognize that my workflow isn't always condusive to an organized set with perfect backup policies. The first stage of my recovery plan is to consolodate, organize and deduplicate localized data. 
 
-![My data inventory](images/data-inventory.jpeg)
 
-I'll go through each type of data, and how I back it up:
+### Consolidation and Deduplication
+
+
+
+#### Catagories of Data
+
+Local Files
+Photos Library
+Video Content
+Code
+Infrastructure Backups
+Music Library
+
+
+#### Device Inventory - each device I need a recovery plan for
+
+Work Laptop
+Personal Laptop
+iPad
+phone
+Home File Server
+Home NAS
+
+#### Service Inventory
+
+GSuite - Email, Google Drive, Contacts
+Evernote
 
 ### iCloud Photo Library
 
-As of 2021, I store over 70,000 RAW images and home videos in my iCloud Photo Library. My primary local storage is on my desk Mac mini, which is set to 'Download Originals', which means an original copy of every RAW photo, iPhone photo and video, and home video I take is downloaded locally to the Mac mini's boot drive.
 
-The library is over 1 TB in size, and growing, so at some point in the future, I may need to re-think this strategy, but it's been working for years, and simple is nice.
-
-Since the remote backup requirement is taken care of by iCloud, and I have one complete copy locally, I rely on Time Machine to keep a second local copy of the entire library on my NAS.
-
-I would love to use an open source media library system, but the extreme convenience of iCloud Photo Library makes it very difficult to downgrade to a less integrated solution.
-
-(Though I still wish Aperture existed... Photos' editing and library organization tools are nowhere near as nice, and Lightroom is too janky for my entire library.)
 
 ### iCloud Music Library + iTunes Match
 
-After managing a library of thousands of ripped songs and audiobooks for years, I finally decided to switch to Apple Music, for the convenience and family sharing.
+The Apple Music library covers most of my needs with match covering original music and rare one-offs that I've collected. I keep originals of anything that's rare or interesting, should I need it digitized differently later on.
 
-I still do purchase and rip a lot of CDs—though mostly kids CDs these days so we can play back local and more obscure kids music artists in the van :)
-
-All the songs are uploaded to my iCloud Music Library and/or matched through iTunes Match, and the entire music library is also stored locally on my Mac mini. It is backed up to the NAS via Time Machine, just like my photo library.
-
-### Dropbox
-
-I tend to be very organized when it comes to files like documents, guides, eBooks, spreadsheets, etc.
-
-Therefore my tidy Dropbox has a very organized 20 GB of data inside, covering almost every computer file I've generated over the past few decades of life, going back to the old ClarisWorks essays I wrote on my old Mac in elementary school.
-
-The Dropbox is mirrored on my two Macs, and is stored in the cloud at Dropbox. It is also backed up via Time Machine to my NAS, so technically I have four copies, one remote.
 
 ### Local Time Machine
 
-My primary active data store is my M1 Mac mini, which is at my desk at home. It is on a UPS, and is accessible via VPN or via local network file sharing.
 
-The entire machine is backed up via Time Machine to my NAS at least once an hour throughout the day, and I check the backup weekly to ensure nothing is stuck and new files are getting added.
-
-I've relied on Time Machine since shortly after Apple introduced it.
-
-The interface is kind of a time capsule of its own, seeing few updates since launch, but hey, it works, it's extremely unobtrusive, and the best thing: set and forget, basically.
-
-Since all my primary data on the M1 mini is stored either in git repositories synced to GitHub, my Dropbox, or one of my iCloud libraries, I automatically have 1 remote copy, then I have a copy on at least my Mac mini and the Time Machine backup on the NAS.
 
 ### Open Source Code Repositories
 
