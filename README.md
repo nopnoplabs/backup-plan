@@ -53,28 +53,28 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 
 #### Critical Device Inventory - each device I need a recovery procedure for
 
-## Device Map
+#### Device Map
 
 | Data Source | Primary Backup | Secondary Backup | Immutable Backup |
 |-------------|----------------|------------------|------------------|
-| Phone       | iCloud         |                  |                  |
-| iPad        | iCloud         |                  |                  |
+| [Phone](https://github.com/nopnoplabs/backup-plan/edit/master/README.md#phone)       | iCloud         |                  |                  |
+| [iPad](https://github.com/nopnoplabs/backup-plan/edit/master/README.md#ipad)        | iCloud         |                  |                  |
 | Work Laptop | NAS            |                  |                  |
 | Personal Lap| NAS            |                  |                  |
 | Home Server | NAS            |                  |                  |
 | NAS         |                |                  |                  |
-| Network Dev.| NAS.           |                  |                  |
+| Network Dev.| NAS            |                  |                  |
 
-#### Service Inventory
+### Service Inventory
 
-### Personal
+#### Personal
 - GSuite:Email, Google Drive, Calendar, Docs, Sheets
 - Evernote
 - iCloud: Photos, Music, Files
 
-### Professional
+#### Professional
 - Adobe Cloud
-- Gsuite
+- GSuite
 - Github
 
 ### Local Time Machine
@@ -89,15 +89,13 @@ Configured to backup to NAS
 
 ### Video Content and NAS Shares
 
-The most important data I have on my NAS, and thus the target of much of my effort around ensuring I have a solid backup and recovery plan, is my video project files.
+<!-- The most important data I have on my NAS, and thus the target of much of my effort around ensuring I have a solid backup and recovery plan, is my video project files.
 
 For every video I create (for YouTube and elsewhere), I create a folder, create a separate Final Cut Pro library (with all media stored inside), and generate all assets, scripts, etc. inside that same directory.
 
 I typically work on the video locally on my Mac mini until it's complete, relying on hourly Time Machine backups to store all the footage over on my NAS.
 
 But once complete, I copy a datestamped project folder over to the NAS, and then eventually delete that project folder off my Mac. At that point, there is only one copy in existence, and that makes me nervous.
-
-![Backup Raspberry Pi](images/backup-pi.jpg)
 
 To help alleviate my nerves, I maintain two backups:
 
@@ -184,8 +182,16 @@ Caveats with Gickup:
 
 **For individual file retrieval**, see: [Retrieving individual files from S3 Glacier Deep Archive using AWS CLI](https://www.jeffgeerling.com/blog/2021/retrieving-individual-files-s3-glacier-deep-archive-using-aws-cli)
 
-**For entire directory restore**, see: TODO.
+-->
 
-## Backup Security
+## Recovery Procedures
+
+### Phone
+
+Replace device, sign in to iCloud - preferably on a fast wifi connection. Default backup interval is daily.
+
+### iPad
+
+Replace device, sign in to iCloud - preferably on a fast wifi connection. Default backup interval is daily.
 
 
