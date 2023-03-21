@@ -1,16 +1,12 @@
 # Backup Plan
 
-This repository is adapted from Jeff Geerling's my-backup-plan repo. Jeff's data inventory and use case is very similar to mine, so I've built upon his work for my own needs.
+This repository is adapted from Jeff Geerling's my-backup-plan repo. Jeff's data inventory and use case is similar to mine, so I've built upon his work for my own needs.
 
 Having a solid and multi-tiered backup plan gives you peace of mind and the freedom to not feel tied to any particular devices or 'sacred and precious backup drive' that has all your data stored on it. An outline of recovery procedures provides guidance for testing backups and can serve as a playbook during an event. These events may be unplanned such as a device failure, or planned - such as my increasing disdain with subscription services like Dropbox.
-
-![3-2-1 backup plan](images/3-2-1-backup.jpeg)
-
 
 - 3 Copies of all my data
 - 2 Copies on different storage media
 - 1 Offsite copy and immutable copy
-
 
 Another way to express this could be: 
 
@@ -55,7 +51,7 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 - Music Library
 
 
-#### Device Inventory - each device I need a recovery plan for
+#### Critical Device Inventory - each device I need a recovery procedure for
 
 - Work Laptop
 - Personal Laptop
@@ -66,17 +62,15 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 
 #### Service Inventory
 
-- GSuite - Email, Google Drive, Contacts
+### Personal
+- GSuite:Email, Google Drive, Calendar, Docs, Sheets
 - Evernote
+- iCloud: Photos, Music, Files
 
-### iCloud Photo Library
-
-
-
-### iCloud Music Library + iTunes Match
-
-The Apple Music library covers most of my needs with match covering original music and rare one-offs that I've collected. I keep originals of anything that's rare or interesting, should I need it digitized differently later on.
-
+### Professional
+- Adobe Cloud
+- Gsuite
+- Github
 
 ### Local Time Machine
 
@@ -84,27 +78,10 @@ The Apple Music library covers most of my needs with match covering original mus
 
 ### Open Source Code Repositories
 
-Most of the data I rely on for my own income resides in a number of GitHub repositories. I _used_ to keep my local copies in Dropbox to make backups a little easier, but that has myriad issues, especially since Dropbox is ill-suited to replicate/sync giant working branches like the Linux kernel, which I work on here and there.
 
-So now I keep a clone of all the GitHub repositories under the `geerlingguy` namespace locally, outside my Dropbox folder. And that's backed up to my NAS via Time Machine.
-
-But there's a problem: I use GitHub as my 'source of truth' for all my open source code (and a few private repositories), and sometimes I merge PRs or do work on a different computer, so I can't rely on my Mac mini to always have the latest, up-to-date codebase.
-
-So I run [Gickup](https://github.com/cooperspencer/gickup) on my backup server. Every week, it runs through all the repositories in my GitHub account, and clones them to a share on my NAS.
 
 ### Local network configuration
 
-While almost every device and service I run in my house is managed via Ansible playbooks, which are tracked in code repositories on GitHub (which I've already covered), I also have some devices which are harder (or impossible) to configure via Ansible.
-
-For these devices, I currently have either an automated script running to dump the device configuration into a NAS directory for all my configs, or I manually update the configuration backup file every once in a while (this is bad, but it's better than not having anything at all):
-
-  - ASUSTOR NAS Settings (automated)
-  - ASUS RT-AX86U Router settings (manual)
-  - Pi-hole settings (manual)
-  - Mikrotik CRS309-1G-8S Switch Settings backup (manual)
-  - HP Aruba HP-2530-8G-PoEP Switch Settings backup (manual)
-
-Follow the issue [#4 - Ensure other important infrastructure configuration is backed up](https://github.com/geerlingguy/my-backup-plan/issues/4) for more details on the automation of all these configuration backups.
 
 ### Video Content and NAS Shares
 
@@ -207,8 +184,4 @@ Caveats with Gickup:
 
 ## Backup Security
 
-TODO: Explain how I keep my backup data secure and free from prying eyes. Also the different 'tiers' of data (in terms of importance of things like encryption).
 
-## Author
-
-This project is maintained by [Jeff Geerling](https://www.jeffgeerling.com), author of [Ansible for DevOps](https://www.ansiblefordevops.com).
