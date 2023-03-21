@@ -86,6 +86,12 @@ Configured to backup to NAS
 
 ### Local network configuration
 
+| Network Device   | Primary Backup | Secondary Backup | Immutable Backup |
+|------------------|----------------|------------------|------------------|
+| Firewall         | Script         |                  |                  |
+| Core Switch      | Script         |                  |                  |
+| Closet Switch    | Cloud Config   |                  |                  |
+| Wifi Controller  | NAS            |                  |                  |
 
 ### Video Content and NAS Shares
 
