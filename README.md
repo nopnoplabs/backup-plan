@@ -18,15 +18,15 @@ Another way to express this could be:
 
 With several devices and a mixture of cloud and on-premise services, I'd like a backup strategy that can accomodate a few different scenarios:
 
-Loss of device (and local data) through loss, theft or damage
+**Loss of device** (and local data) through loss, theft or damage
   example: ipad or laptop fails or goes misisng and must be replaced with minimal data loss
   example: ransomware encrypts local device
 
-Loss of service access or availablility
+**Loss of service** access or availablility
   example: icloud or Google account is compromised and locked out. 
   example: service is unavailble through outage or limited connectivity
   
-Loss of infrastructure or site
+**Loss of infrastructure or site**
   example: Infrastructure failure scenario: internet access, wifi, firewall, NAS, local server services
   example: Natural disaster, fire, theft, extended power outage, etc.
   
@@ -53,12 +53,17 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 
 #### Critical Device Inventory - each device I need a recovery procedure for
 
-- Work Laptop
-- Personal Laptop
-- iPad
-- phone
-- Home File Server
-- Home NAS
+## Device Map
+
+| Data Source | Primary Backup | Secondary Backup | Immutable Backup |
+|-------------|----------------|------------------|------------------|
+| Phone       | iCloud         |                  |                  |
+| iPad        | iCloud         |                  |                  |
+| Work Laptop | NAS            |                  |                  |
+| Personal Lap| NAS            |                  |                  |
+| Home Server | NAS            |                  |                  |
+| NAS         |                |                  |                  |
+| Network Dev.| NAS.           |                  |                  |
 
 #### Service Inventory
 
@@ -74,10 +79,9 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 
 ### Local Time Machine
 
-
+Configured to backup to NAS
 
 ### Open Source Code Repositories
-
 
 
 ### Local network configuration
