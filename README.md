@@ -62,8 +62,8 @@ Data sprawl is an ongoing challange for many of us. I use multiple laptops, mobi
 | Work Laptop | NAS            |                  |                  |
 | Personal Lap| NAS            |                  |                  |
 | Home Server | NAS            |                  |                  |
-| NAS         |                |                  |                  |
-| Network Dev.| NAS            |                  |                  |
+| Network Dev.         | NAS            |                  |                  |
+| [NAS](https://github.com/nopnoplabs/backup-plan/edit/master/README.md#ipad)        | Backup NAS     | S3 Glacier                 |                  |
 
 ### Service Inventory
 
@@ -86,12 +86,12 @@ Configured to backup to NAS
 
 ### Local network configuration
 
-| Network Device   | Primary Backup | Secondary Backup | Immutable Backup |
+| Network Device   | Backup Method  |                  |                  |
 |------------------|----------------|------------------|------------------|
 | Firewall         | Script         |                  |                  |
 | Core Switch      | Script         |                  |                  |
 | Closet Switch    | Cloud Config   |                  |                  |
-| Wifi Controller  | NAS            |                  |                  |
+| Wifi Controller  | Script         |                  |                  |
 
 ### Video Content and NAS Shares
 
@@ -190,14 +190,31 @@ Caveats with Gickup:
 
 -->
 
-## Recovery Procedures
+## Device Procedures
 
 ### Phone
 
+#### Backup
+iCloud
+
+#### Recovery
 Replace device, sign in to iCloud - preferably on a fast wifi connection. Default backup interval is daily.
 
 ### iPad
 
+#### Backup
+iCloud
+
+#### Recovery
 Replace device, sign in to iCloud - preferably on a fast wifi connection. Default backup interval is daily.
+
+### NAS
+
+#### Backup
+Synology s3 Glacier App
+
+#### Recovery
+Replace device, restore from AWS
+
 
 
